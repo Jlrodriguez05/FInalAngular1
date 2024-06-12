@@ -1,0 +1,13 @@
+<mat-list role="list">
+    @for(locacion of data.results; track $index){
+        <mat-list-item>
+          <div matListItemTitle>{{locacion.name}}</div>
+         <div matListItemLine> Tipo de locacion: {{locacion.type}} --- Dimension : {{locacion.dimension}}</div> 
+           <div matListItemLine> Fecha al aire: {{locacion.created| date:'medium'}}</div>
+           <div matListItemLine> + informacion: {{locacion.url}}</div>
+           <div matListItemLine> URL Personajes visto por ultima vez: {{locacion.residents}} </div>
+           <div> </div>
+        </mat-list-item>
+     }
+      
+    </mat-list>

@@ -1,0 +1,12 @@
+
+<mat-list role="list">
+    @for(episodio of data.results; track $index){
+        <mat-list-item>
+        <!-- <mat-icon matListItemIcon> <img [src]="personaje.image" width="40" height="40"></mat-icon>--> 
+          <div matListItemTitle>{{episodio.name}}</div>
+          <div matListItemLine> Episodio numero: {{episodio.episode}} --- Fecha al aire: {{episodio.air_date| date:'medium'}}</div> 
+          <div matListItemLine> URL del Capitulo : {{episodio.url}}</div> 
+        </mat-list-item>
+     }
+      
+    </mat-list>

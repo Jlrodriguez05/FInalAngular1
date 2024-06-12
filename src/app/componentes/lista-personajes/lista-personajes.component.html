@@ -1,0 +1,11 @@
+
+<mat-list role="list">
+  @for(personaje of data.results; track $index){
+      <mat-list-item>
+        <mat-icon matListItemIcon> <img [src]="personaje.image" width="45" height="45"></mat-icon>
+        <div matListItemTitle>{{personaje.name}}</div>
+        <div matListItemLine> Status: {{personaje.status}} -- especie: {{personaje.species}} Fecha: {{personaje.created | date:'medium'}}</div>
+      </mat-list-item>
+   }
+    
+  </mat-list>
